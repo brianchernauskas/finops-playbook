@@ -207,8 +207,9 @@
     <button data-p="9"><span class="num">09</span>AI, SaaS &amp; Beyond Cloud</button>
     <div class="grp">In the Field</div>
     <button data-p="10"><span class="num">10</span>FinOps Meets the Deal</button>
+    <button data-p="11"><span class="num">11</span>Sourcing the Work</button>
     <div class="grp">Reference</div>
-    <button data-p="11"><span class="num">11</span>KPIs, Glossary &amp; Cheat Sheet</button>
+    <button data-p="12"><span class="num">12</span>KPIs, Glossary &amp; Cheat Sheet</button>
   </nav>
 
   <main>
@@ -348,7 +349,7 @@
         <thead><tr><th>Domain</th><th>Capabilities</th><th>Where it's covered</th></tr></thead>
         <tbody>
           <tr><td><strong>Understand Usage &amp; Cost</strong></td><td>Data Ingestion · Allocation · Reporting &amp; Analytics · Anomaly Management</td><td>§04</td></tr>
-          <tr><td><strong>Quantify Business Value</strong></td><td>Planning &amp; Estimating · Forecasting · Budgeting · KPIs &amp; Benchmarking · Unit Economics</td><td>§04, §11</td></tr>
+          <tr><td><strong>Quantify Business Value</strong></td><td>Planning &amp; Estimating · Forecasting · Budgeting · KPIs &amp; Benchmarking · Unit Economics</td><td>§04, §12</td></tr>
           <tr><td><strong>Optimize Usage &amp; Cost</strong></td><td>Architecting for Cloud · Rate Optimization · Workload Optimization · Licensing &amp; SaaS · Cloud Sustainability</td><td>§06, §07, §09</td></tr>
           <tr><td><strong>Manage the FinOps Practice</strong></td><td>FinOps Practice Operations · Policy &amp; Governance · FinOps Assessment · FinOps Tools &amp; Services · Education &amp; Enablement · Invoicing &amp; Chargeback · Onboarding Workloads · Intersecting Disciplines</td><td>§05, §08</td></tr>
         </tbody>
@@ -891,6 +892,7 @@
       </ul>
 
       <div class="coach"><span class="tag">Coach's note: using the Proxima toolkit</span><p style="margin:0">The <strong>IT Spend Diagnostic</strong> finds where negotiable money sits across suppliers; the <strong>Cloud Baseline Planner</strong> establishes the optimized run-rate; the provider <strong>negotiation planners</strong> turn that baseline and forecast into a commitment strategy. This playbook is the discipline that makes each of those inputs trustworthy.</p></div>
+      <p>The obvious question a client will ask in the first meeting is <strong>"who actually does this work?"</strong> — Proxima, their team, their reseller, or someone else. <a href="#" data-goto="11">Section 11</a> covers the delivery options, how each one is funded, and the answer to give.</p>
 
       <div class="warn"><span class="tag">The classic traps at the FinOps–negotiation seam</span>
         <ul style="margin:8px 0 0">
@@ -904,12 +906,106 @@
 
       <div class="pagenav">
         <button data-goto="9"><span>Previous</span><b>← 09 · AI, SaaS &amp; Beyond Cloud</b></button>
-        <button data-goto="11"><span>Next</span><b>11 · KPIs, Glossary &amp; Cheat Sheet →</b></button>
+        <button data-goto="11"><span>Next</span><b>11 · Sourcing the Work →</b></button>
       </div>
     </section>
 
-    <!-- ============ 11 GLOSSARY ============ -->
+    <!-- ============ 11 SOURCING THE WORK ============ -->
     <section class="page" id="p11">
+      <div class="kicker">In the field</div>
+      <h2 class="title">Sourcing the FinOps work — options when you don't own a practice</h2>
+      <p class="lede">Proxima doesn't run a FinOps delivery practice today. That's as much a positioning choice as a gap: the independence that makes our commercial advice credible is exactly what most FinOps delivery models compromise. This section is the menu — who can do the work, who pays for it, and where the conflicts hide.</p>
+
+      <div class="coach">
+        <span class="tag">Coach's framing</span>
+        <p style="margin:0">Split the work in two before you decide anything. <strong>The commercial half</strong> — baseline, allocation standards, forecast, commitment strategy, contract — is sourcing work Proxima already does. <strong>The engineering half</strong> — rightsizing, scheduling, tagging enforcement, platform tooling, automation — needs hands in the client's cloud accounts. You almost never need to own both to run a valuable engagement; you need a credible answer for who does each.</p>
+      </div>
+
+      <h3>The five delivery models</h3>
+      <div class="scroller"><table>
+        <thead><tr><th>Model</th><th>Who does the work</th><th>How it's paid for</th><th>Best when</th><th>Main risk</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1. Advisory-led, client-executed</strong><br><span class="muted">Proxima today</span></td><td>Proxima assesses, designs, and sizes; client engineering executes</td><td>Fixed fee or retainer</td><td>A renewal is driving the work and the client has capable platform engineers</td><td>Execution stalls if no internal owner is named</td></tr>
+          <tr><td><strong>2. Client builds a practice</strong></td><td>Client hires a FinOps lead + champions; Proxima designs the operating model and trains</td><td>Client headcount; Proxima fee for design &amp; enablement</td><td>Cloud spend is large and permanent (roughly $20M+/yr)</td><td>Takes 2–4 quarters to produce results; needs an executive sponsor</td></tr>
+          <tr><td><strong>3. Specialist FinOps consultancy</strong></td><td>A pure-play FinOps/cloud-economics firm, as our subcontractor or as a referral</td><td>Day rate, fixed fee, or subscription</td><td>Deep tooling, Kubernetes, or data-platform cost work is needed</td><td>They may also want the commercial/negotiation scope — agree boundaries in writing</td></tr>
+          <tr><td><strong>4. VAR / reseller / MSP</strong></td><td>The partner that resells or manages the client's cloud bundles optimization services</td><td>Usually funded by resell margin and provider incentives — often "free"</td><td>Mid-market clients with thin internal teams and no appetite to pay fees</td><td>Structural conflict: their revenue grows with the bill they're meant to shrink</td></tr>
+          <tr><td><strong>5. Automation / platform-as-a-service</strong></td><td>Software plus a light managed service, mostly on the rate side</td><td>Subscription, or a share of measured savings</td><td>Large, dynamic compute estates; fast wins on commitment coverage</td><td>Fee basis can overstate value; it doesn't touch usage or culture</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3>How VARs and resellers actually get paid</h3>
+      <p>The client rarely sees this, and it explains almost every behavior you'll observe from a partner-led FinOps offer.</p>
+      <div class="grid g2">
+        <div class="card"><h4>💱 Resell margin &amp; partner of record</h4><p style="margin:0">Under the hyperscaler channel programs (AWS Solution Provider, Microsoft CSP, Google Cloud reseller/MSP), the partner buys cloud wholesale and bills the client, keeping a spread or rebating part of it. "Free FinOps" is funded out of that spread — the client pays for it in the rate.</p></div>
+        <div class="card"><h4>🎁 Provider funding</h4><p style="margin:0">Hyperscalers pay partners to run assessments and migrations: AWS MAP and Optimization &amp; Licensing Assessments, Microsoft's Azure migration/modernization funding and ECIF, Google's migration and partner incentive programs. This is genuinely cheap for the client — the provider is paying — but it comes with a migration or consumption agenda.</p></div>
+        <div class="card"><h4>🧾 Services &amp; platform fees</h4><p style="margin:0">A managed FinOps service on top of a licensed platform (often priced as a percentage of cloud spend under management — a fee that grows with the bill).</p></div>
+        <div class="card"><h4>📊 Gainshare</h4><p style="margin:0">A share of "savings," usually measured against on-demand list or a pre-engagement run-rate. The baseline definition is the entire negotiation.</p></div>
+      </div>
+
+      <div class="warn"><span class="tag">Watch out: the four conflicts to name out loud</span>
+        <ul style="margin:8px 0 0">
+          <li><strong>Margin vs. mandate:</strong> a partner earning a percentage of consumption has a structural reason not to shrink it. Ask how their commercial model survives a 25% reduction in the client's bill.</li>
+          <li><strong>Partner of record:</strong> moving billing through a reseller can change eligibility for private pricing, support terms, and who sits in the room at renewal. Never let a client change partner-of-record status mid-negotiation without modeling the effect on the PPA/MACC.</li>
+          <li><strong>Pooled commitments:</strong> some MSP models hold commitments in their own name and pool the benefit. Check whose balance sheet the commitment sits on and what happens at exit — AWS tightened reseller RI/Savings Plan sharing in 2025, which broke several of these models.</li>
+          <li><strong>Savings math:</strong> a fee taken as a share of savings against <em>on-demand list</em> charges the client for discounts they already had. Insist the baseline is the actual pre-engagement run-rate.</li>
+        </ul>
+      </div>
+
+      <h3>Matching the model to the client</h3>
+      <div class="scroller"><table>
+        <thead><tr><th>Client profile</th><th>Recommended shape</th><th>Proxima's role</th></tr></thead>
+        <tbody>
+          <tr><td><strong>&lt; $5M cloud spend, small IT team</strong></td><td>VAR- or MSP-led, or native tools plus light advisory</td><td>Vet the partner, set the standards, audit the outcome</td></tr>
+          <tr><td><strong>$5–25M, renewal in the next year</strong></td><td>Advisory-led assessment now; commitment automation for the rate side</td><td>Prime — baseline, forecast, commitment strategy, negotiation</td></tr>
+          <tr><td><strong>$25M+, mature engineering org</strong></td><td>Client builds an in-house practice</td><td>Design the operating model, train, then stay on for the commercial cycle</td></tr>
+          <tr><td><strong>Any size, no internal capacity to execute</strong></td><td>Specialist consultancy subcontracted under Proxima, or a referral</td><td>Prime and govern, or refer and stay on the commercial scope</td></tr>
+          <tr><td><strong>Multi-supplier IT estate, cloud is one part</strong></td><td>Proxima-led across the estate, partners for cloud engineering depth</td><td>Prime — this is the IT Spend Diagnostic pattern</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3>Due diligence on any FinOps partner</h3>
+      <p>Whether you're referring, subcontracting, or reviewing a partner the client already has, ask these. The answers sort the genuinely independent from the margin-funded fast.</p>
+      <ul class="checklist">
+        <li>Do you resell or manage any of this client's cloud, and what margin or rebate do you earn on it?</li>
+        <li>How is your fee calculated — against list price, on-demand, or the client's actual pre-engagement run-rate?</li>
+        <li>Who holds the commitments, in whose name, and what happens to them if we terminate?</li>
+        <li>Who owns the billing data, the tooling configuration, and the allocation rules at exit?</li>
+        <li>Are you a FinOps Foundation Certified Service Provider, and which named staff hold current certifications?</li>
+        <li>Will you contractually leave the client's direct provider relationship and private pricing untouched?</li>
+        <li>Show realized savings on a comparable estate — net of your fee, measured against a real baseline.</li>
+        <li>Does your recommendation engine ever favor a product or provider you resell?</li>
+      </ul>
+
+      <h3>If Proxima wants to build the capability</h3>
+      <div class="grid g2">
+        <div class="card"><h4>🎓 Train (cheapest, slowest)</h4><p style="margin:0">Put existing consultants through FinOps Foundation certification (Certified Practitioner is the entry point, plus role-specific tracks) and join the Foundation. Gives vocabulary and credibility on the Inform and rate side — not engineering depth.</p></div>
+        <div class="card"><h4>🤝 Partner formally</h4><p style="margin:0">A named delivery partner with a reciprocal referral and subcontract agreement, so Proxima can prime an engagement and staff the engineering half on demand. Fastest route to a credible offer.</p></div>
+        <div class="card"><h4>🧑‍💻 Borrow</h4><p style="margin:0">An associate or contractor bench of FinOps practitioners, white-labelled. Variable cost, no bench risk, but quality depends on individuals.</p></div>
+        <div class="card"><h4>🏗 Hire a lead</h4><p style="margin:0">One senior practitioner paired with existing sourcing consultants seeds a practice. Only worth it with a pipeline of engagements to fund the bench.</p></div>
+      </div>
+
+      <h3>Commercial models for the engagement</h3>
+      <div class="scroller"><table>
+        <thead><tr><th>Model</th><th>Fits</th><th>Design note</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Fixed-fee assessment</strong></td><td>The 30/60/90 engagement in §10</td><td>Clean, predictable, and the natural on-ramp to a renewal mandate</td></tr>
+          <tr><td><strong>Subscription advisory</strong></td><td>Ongoing cadence, quarterly reviews, renewal calendar</td><td>Keeps the data fresh between deals — the highest-value position to hold</td></tr>
+          <tr><td><strong>Gainshare</strong></td><td>Clients who won't fund a fee up front</td><td>Define the baseline, the measurement window, and exclusions precisely, or it ends in dispute</td></tr>
+          <tr><td><strong>Subcontract (Proxima primes)</strong></td><td>Client wants one throat to choke</td><td>Proxima owns quality and the client relationship; margin on partner delivery</td></tr>
+          <tr><td><strong>Referral (partner primes)</strong></td><td>Work we don't want to own</td><td>Protects independence; agree in advance that Proxima keeps the commercial scope</td></tr>
+        </tbody>
+      </table></div>
+
+      <div class="coach"><span class="tag">Coach's recommendation — the stance to take today</span><p style="margin:0">Lead with the half we're best at and be explicit about the half we're not. Proxima owns <strong>Inform and the rate/contract side</strong>: baseline, allocation standards, forecast, commitment strategy, negotiation. Partner for the <strong>engineering-heavy Operate work</strong>. And say the thing no VAR can say: <em>we take no margin on your cloud consumption, so our advice to spend less costs us nothing</em>. That independence is the differentiator — a practice built by taking resell margin would quietly cost us the reason clients hire us.</p></div>
+
+      <div class="pagenav">
+        <button data-goto="10"><span>Previous</span><b>← 10 · FinOps Meets the Deal</b></button>
+        <button data-goto="12"><span>Next</span><b>12 · KPIs, Glossary &amp; Cheat Sheet →</b></button>
+      </div>
+    </section>
+
+    <!-- ============ 12 GLOSSARY ============ -->
+    <section class="page" id="p12">
       <div class="kicker">Reference</div>
       <h2 class="title">KPIs, glossary &amp; cheat sheet</h2>
       <p class="lede">The numbers to track and the vocabulary to use. Skim it now; come back whenever a meeting throws a new term at you.</p>
@@ -958,12 +1054,15 @@
         <dt>Domain</dt><dd>One of the four outcome areas in the FinOps Framework, each grouping several capabilities.</dd>
         <dt>Effective Savings Rate (ESR)</dt><dd>The blended percentage saved versus on-demand across all rate optimization — the best single rate KPI.</dd>
         <dt>FinOps</dt><dd>Cloud Financial Operations — the practice of maximizing business value from technology spend through collaboration between engineering, finance, procurement, and product.</dd>
+        <dt>FinOps Certified Service Provider</dt><dd>A FinOps Foundation designation for consultancies and managed service providers that meet its training and practice requirements — a useful (not sufficient) filter when vetting a delivery partner.</dd>
         <dt>FinOps Foundation</dt><dd>The Linux Foundation project that maintains the FinOps Framework, FOCUS, and certification programs.</dd>
+        <dt>Gainshare</dt><dd>A fee taken as a share of measured savings. Its value depends entirely on the agreed baseline — actual pre-engagement run-rate, not on-demand list.</dd>
         <dt>FOCUS</dt><dd>FinOps Open Cost &amp; Usage Specification — an open standard schema for billing data across providers and SaaS vendors.</dd>
         <dt>Inform / Optimize / Operate</dt><dd>The three iterative phases of the FinOps lifecycle.</dd>
         <dt>Laddering</dt><dd>Buying commitments in small, regular tranches so expirations are staggered and risk is spread.</dd>
         <dt>List / on-demand equivalent cost</dt><dd>What usage would have cost at public list price — the reference point for measuring savings.</dd>
         <dt>Net amortized cost</dt><dd>Amortized cost after negotiated discounts and credits — the truest cost of ownership view.</dd>
+        <dt>Partner of record</dt><dd>The reseller or partner attached to a cloud account under a provider channel program (AWS Solution Provider, Microsoft CSP, Google reseller). Changing it moves billing, margin, and sometimes negotiating position.</dd>
         <dt>Persona</dt><dd>A role in the FinOps model — practitioner, engineering, finance, procurement, product, leadership — plus allied personas.</dd>
         <dt>Provisioned throughput</dt><dd>Reserved AI model capacity (e.g. Azure OpenAI PTUs) priced per unit-hour regardless of token use.</dd>
         <dt>Rate optimization</dt><dd>Reducing the price paid per unit — commitments, negotiated discounts, licensing benefits.</dd>
@@ -983,7 +1082,7 @@
       <div class="coach"><span class="tag">Final word from your coach</span><p style="margin:0">Remember three things: <strong>allocation comes first</strong>, <strong>optimize before you commit</strong>, and <strong>FinOps is a habit, not a project</strong>. Clients who internalize those walk into every renewal as the best-prepared buyer the vendor will see all year — and that's the client you want to be negotiating for.</p></div>
 
       <div class="pagenav">
-        <button data-goto="10"><span>Previous</span><b>← 10 · FinOps Meets the Deal</b></button>
+        <button data-goto="11"><span>Previous</span><b>← 11 · Sourcing the Work</b></button>
         <button data-goto="0"><span>Back to</span><b>00 · Start Here ↑</b></button>
       </div>
     </section>
@@ -994,7 +1093,7 @@
 <script>
   var pages = document.querySelectorAll('section.page');
   var btns = document.querySelectorAll('nav.side button[data-p]');
-  var labels = ['00 · Start Here','01 · FinOps 101','02 · Phases, Domains & Capabilities','03 · Maturity: Crawl, Walk, Run','04 · Allocation & Visibility','05 · Showback & Chargeback','06 · Commitment Management','07 · Usage Optimization','08 · Governance & Operating Model','09 · AI, SaaS & Beyond Cloud','10 · FinOps Meets the Deal','11 · KPIs, Glossary & Cheat Sheet'];
+  var labels = ['00 · Start Here','01 · FinOps 101','02 · Phases, Domains & Capabilities','03 · Maturity: Crawl, Walk, Run','04 · Allocation & Visibility','05 · Showback & Chargeback','06 · Commitment Management','07 · Usage Optimization','08 · Governance & Operating Model','09 · AI, SaaS & Beyond Cloud','10 · FinOps Meets the Deal','11 · Sourcing the Work','12 · KPIs, Glossary & Cheat Sheet'];
 
   var msel = document.getElementById('msel');
   labels.forEach(function(l,i){var o=document.createElement('option');o.value=i;o.textContent=l;msel.appendChild(o);});
@@ -1008,8 +1107,8 @@
     window.scrollTo({top:0,behavior:'smooth'});
   }
   btns.forEach(function(b){b.addEventListener('click',function(){go(parseInt(b.getAttribute('data-p')));});});
-  document.querySelectorAll('button[data-goto]').forEach(function(b){
-    b.addEventListener('click',function(){go(parseInt(b.getAttribute('data-goto')));});
+  document.querySelectorAll('[data-goto]').forEach(function(b){
+    b.addEventListener('click',function(e){e.preventDefault();go(parseInt(b.getAttribute('data-goto')));});
   });
 </script>
 </body>
